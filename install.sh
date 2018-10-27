@@ -19,6 +19,7 @@ wget "https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-t
 mkdir ~/pebble-dev
 cd ~/pebble-dev
 tar -jxf "$DOWNLOAD_DIR/$SDK_ARCHIVE.tar.bz2"
+rm "$DOWNLOAD_DIR/$SDK.tar.bz2"
 echo 'export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH' >> ~/.bash_profile
 
 # Install python and node dependencies
