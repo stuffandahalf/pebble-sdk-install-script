@@ -11,6 +11,11 @@
 
 # Steps from https://developer.rebble.io/developer.pebble.com/sdk/install/linux/index.html
 
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root"
+    exit 1
+fi
+
 DOWNLOAD_DIR=`pwd`
 SDK="pebble-sdk-4.5-linux64"
 
